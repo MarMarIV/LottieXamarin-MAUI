@@ -9,7 +9,7 @@
     <EnableDefaultItems>false</EnableDefaultItems>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <IsBindingProject>true</IsBindingProject>
-    <Version>2.6.0</Version>
+    <Version>8.2.0</Version>
   </PropertyGroup>
   
   <ItemGroup>
@@ -25,7 +25,7 @@
 
   <ItemGroup Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'ios'">
     <ObjcBindingApiDefinition Include="ApiDefinitions.Ios.cs" />
-    <ObjcBindingNativeLibrary Include="libLottie-ios.a" />
+    <ObjcBindingNativeLibrary Include="libLottie-ios.a" />  
     <Compile Include="libLottie-ios.linkwith.cs">
       <DependentUpon>libLottie-ios.a</DependentUpon>
     </Compile>
